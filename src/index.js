@@ -15,13 +15,13 @@ class Square extends React.Component {
   }
 }
 
-class Board extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      squares: Array(9).fill(null),
-    };
-  }
+function Square(props) {
+  return (
+    <button className="square" onClick={props.onClick}>
+      {props.value} 
+    </button>
+  )
+}
 
   handleClick(i) {
     const squares = this.state.squares.slice();
